@@ -1,6 +1,6 @@
 var aws = require("aws-sdk");
 var ses = new aws.SES({
-  region: "ap-south-1"
+  region: "<region>"
 });
 exports.handler = function(event) {
   var message = JSON.parse(event.Records[0].Sns.Message);
