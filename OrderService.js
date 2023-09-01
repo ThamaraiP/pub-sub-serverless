@@ -11,7 +11,7 @@ exports.handler =  async (event, context) => {
   await sns
     .publish(
       {
-        TopicArn: "arn:aws:sns:ap-south-1:982353931640:Order",
+        TopicArn: "arn:aws:sns:<region>:<account>:<topicName>",
         Message: JSON.stringify(event)
       },
     ).promise();
